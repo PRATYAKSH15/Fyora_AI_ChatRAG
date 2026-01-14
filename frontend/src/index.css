@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Colors */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+
+  /* Dark Colors */
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+}
+
+/* Base Styles */
+body {
+  @apply bg-dark-950 text-dark-100 antialiased;
+}
+
+/* Component Classes */
+@utility btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+@utility btn-secondary {
+  @apply bg-dark-700 hover:bg-dark-600 text-dark-100 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+@utility input-field {
+  @apply bg-dark-800 border border-dark-600 rounded-lg px-4 py-2 text-dark-100 placeholder-dark-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Markdown Content Styles */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  @apply font-bold mt-4 mb-2;
+}
+
+.markdown-content h1 {
+  @apply text-2xl;
+}
+
+.markdown-content h2 {
+  @apply text-xl;
+}
+
+.markdown-content h3 {
+  @apply text-lg;
+}
+
+.markdown-content p {
+  @apply mb-3;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  @apply ml-6 mb-3;
+}
+
+.markdown-content ul {
+  @apply list-disc;
+}
+
+.markdown-content ol {
+  @apply list-decimal;
+}
+
+.markdown-content code {
+  @apply bg-dark-700 px-1.5 py-0.5 rounded text-sm;
+}
+
+.markdown-content pre {
+  @apply bg-dark-700 p-4 rounded-lg overflow-x-auto mb-3;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent p-0;
+}
+
+.markdown-content a {
+  @apply text-primary-400 hover:text-primary-300 underline;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-primary-500 pl-4 italic text-dark-300 my-3;
+}
+
+/* Animation for streaming cursor */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
