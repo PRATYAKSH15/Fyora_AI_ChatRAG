@@ -2,6 +2,7 @@
 
 A production-ready conversational AI application featuring RAG (Retrieval Augmented Generation), web search integration, and real-time streaming responses.
 
+![Onboard](onboard.png)
 ![Fyora Chat Screenshot](image.png)
 ![RAG Upload Chat](rag1.png)
 ![RAG Upload Chat](rag2.png)
